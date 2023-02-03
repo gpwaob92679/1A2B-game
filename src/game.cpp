@@ -1,11 +1,14 @@
 #include "game.h"
 
-#include <QDebug>
-#include <QList>
-#include <QString>
 #include <algorithm>
 #include <chrono>
 #include <random>
+
+#include <QDebug>
+#include <QList>
+#include <QString>
+
+namespace one_a_two_b {
 
 Game::Game() {
   uint64_t seed = std::chrono::system_clock::now().time_since_epoch().count();
@@ -18,18 +21,19 @@ Game::Game() {
 QString Game::Guess(QList<int> &guess) {
   assert(guess.size() == answer_.size());
 
-  int count_a = 0;
-  int count_b = 0;
-
+  int a_count = 0;
+  int b_count = 0;
   for (int i = 0; i < guess.size(); ++i) {
     if (answer_.contains(guess[i])) {
       if (answer_.indexOf(guess[i]) == i) {
-        ++count_a;
+        ++a_count;
       } else {
-        ++count_b;
+        ++b_count;
       }
     }
   }
 
-  return QString("%1A%2B").arg(count_a).arg(count_b);
+  return QString("%1A%2B").arg(a_count).arg(b_count);
 }
+
+}  // namespace one_a_two_b

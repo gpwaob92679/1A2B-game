@@ -4,6 +4,8 @@
 #include <QList>
 #include <QString>
 
+namespace one_a_two_b {
+
 class Game {
  public:
   Game();
@@ -12,5 +14,7 @@ class Game {
  private:
   QList<int> answer_;
 };
+
+}  // namespace one_a_two_b
 
 #endif  // GAME_H_

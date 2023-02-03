@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_H_
-#define MAINWINDOW_H_
+#ifndef UI_MAINWINDOW_H_
+#define UI_MAINWINDOW_H_
 
 #include <QMainWindow>
 
@@ -10,6 +10,8 @@ namespace Ui {
 class MainWindow;
 }
 QT_END_NAMESPACE
+
+namespace one_a_two_b {
 
 class MainWindow : public QMainWindow {
   Q_OBJECT
@@ -26,4 +28,6 @@ class MainWindow : public QMainWindow {
   Game *game_;
 };
 
-#endif  // MAINWINDOW_H_
+}  // namespace one_a_two_b
+
+#endif  // UI_MAINWINDOW_H_

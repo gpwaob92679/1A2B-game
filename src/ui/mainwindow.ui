@@ -97,7 +97,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QListWidget" name="listWidget_past_gusses">
+      <widget class="QListWidget" name="listWidget_past_guesses">
        <property name="horizontalScrollBarPolicy">
         <enum>Qt::ScrollBarAlwaysOff</enum>
        </property>

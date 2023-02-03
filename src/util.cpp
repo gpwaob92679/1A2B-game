@@ -3,6 +3,8 @@
 #include <QList>
 #include <QString>
 
+namespace one_a_two_b {
+
 QString QlistToQstring(QList<int> &list) {
   QString ret;
   for (int &i : list) {
@@ -10,3 +12,5 @@ QString QlistToQstring(QList<int> &list) {
   }
   return ret;
 }
+
+}  // namespace one_a_two_b
