@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QMessageBox>
+
 #include "game.h"
 #include "ui/timer_label.h"
 #include "util.h"
@@ -58,6 +60,22 @@ void MainWindow::on_pushButtonSubmit_clicked() {
 
   if (guess_result == QString("4A0B")) {
     emit GameEnded();
+
+    QString try_text = QString("%1").arg(ui_->listWidgetPastGuesses->count());
+    if (try_text == "1") {
+      try_text += " try";
+    } else {
+      try_text += " tries";
+    }
+
+    QString info_text =
+        QString("Congratulations! You got the correct answer in %1 with %2!")
+            .arg(timer_label_->text(), try_text);
+
+    QMessageBox *messageBox =
+        new QMessageBox(QMessageBox::Information, "Congratulations!", info_text,
+                        QMessageBox::Ok);
+    messageBox->exec();
   }
 }
 
