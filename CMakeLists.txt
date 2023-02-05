@@ -18,6 +18,8 @@ set(PROJECT_SOURCES
   src/game.h
   src/util.cpp
   src/util.h
+  src/ui/digit_spin_box.h
+  src/ui/digit_spin_box.cpp
   src/ui/mainwindow.cpp
   src/ui/mainwindow.h
   src/ui/mainwindow.ui

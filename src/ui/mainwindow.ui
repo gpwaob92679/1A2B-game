@@ -29,12 +29,15 @@
       <x>20</x>
       <y>30</y>
       <width>361</width>
-      <height>32</height>
+      <height>37</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QSpinBox" name="spinBox_0">
+      <widget class="one_a_two_b::DigitSpinBox" name="digitSpinBox_0">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
        <property name="wrapping">
         <bool>false</bool>
        </property>
@@ -44,12 +47,9 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox_1">
-       <property name="showGroupSeparator" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="suffix">
-        <string/>
+      <widget class="one_a_two_b::DigitSpinBox" name="digitSpinBox_1">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
        </property>
        <property name="maximum">
         <number>9</number>
@@ -57,14 +57,20 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox_2">
+      <widget class="one_a_two_b::DigitSpinBox" name="digitSpinBox_2">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
        <property name="maximum">
         <number>9</number>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox_3">
+      <widget class="one_a_two_b::DigitSpinBox" name="digitSpinBox_3">
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
        <property name="maximum">
         <number>9</number>
        </property>
@@ -72,6 +78,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_submit">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <property name="text">
         <string>Submit</string>
        </property>
@@ -124,6 +133,13 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>one_a_two_b::DigitSpinBox</class>
+   <extends>QSpinBox</extends>
+   <header>ui/digit_spin_box.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
