@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "game.h"
+#include "ui/timer_label.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,12 +22,18 @@ class MainWindow : public QMainWindow {
   ~MainWindow();
 
  private slots:
-  void on_pushButtonSubmit_clicked();
   void on_actionNew_triggered();
+  void on_pushButtonSubmit_clicked();
+
+ signals:
+  void GameEnded();
 
  private:
+  void InitTimerLabel();
+
   Ui::MainWindow *ui_;
   Game *game_;
+  TimerLabel *timer_label_;
 };
 
 }  // namespace one_a_two_b

@@ -38,6 +38,8 @@ set(PROJECT_SOURCES
   src/ui/mainwindow.cpp
   src/ui/mainwindow.h
   src/ui/mainwindow.ui
+  src/ui/timer_label.h
+  src/ui/timer_label.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

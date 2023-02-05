@@ -11,14 +11,17 @@ class DigitSpinBox : public QSpinBox {
  public:
   DigitSpinBox(QWidget *parent = nullptr);
 
+ public slots:
+  void Reset();
+
+ signals:
+  void NumberEntered();
+
  protected:
   void focusInEvent(QFocusEvent *event) override;
   void keyPressEvent(QKeyEvent *event) override;
-
- public slots:
-  void Reset();
 };
 
-} // namespace one_a_two_b
+}  // namespace one_a_two_b
 
 #endif  // UI_DIGITSPINBOX_H_

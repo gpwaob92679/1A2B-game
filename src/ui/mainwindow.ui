@@ -139,7 +139,14 @@
    </widget>
    <addaction name="menuGame"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei UI</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
   <action name="actionNew">
    <property name="text">
     <string>New</string>

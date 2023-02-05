@@ -37,6 +37,7 @@ void DigitSpinBox::keyPressEvent(QKeyEvent *event) {
     case Qt::Key_8:
     case Qt::Key_9:
       focusNextChild();
+      emit NumberEntered();
   }
 }
 
