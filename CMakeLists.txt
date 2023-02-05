@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-project(1A2B-game VERSION 0.1.0 LANGUAGES CXX)
+project(1A2B-game VERSION 0.2.0 LANGUAGES CXX)
 
 # Read the git tags to determine the project version
 include(GetGitVersion)
