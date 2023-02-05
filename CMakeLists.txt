@@ -1,6 +1,21 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(1A2B-game VERSION 0.1 LANGUAGES CXX)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+project(1A2B-game VERSION 0.1.0 LANGUAGES CXX)
+
+# Read the git tags to determine the project version
+include(GetGitVersion)
+get_git_version(GIT_VERSION)
+# If no git version can be determined, use the version
+# from the project() command
+if ("${GIT_VERSION}" STREQUAL "0.0.0")
+  set(VERSION "${benchmark_VERSION}")
+else()
+  set(VERSION "${GIT_VERSION}")
+endif()
+# Tell the user what versions we are using
+message(STATUS "Version: ${VERSION}")
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
