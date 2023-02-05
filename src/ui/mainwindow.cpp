@@ -27,8 +27,11 @@ void MainWindow::on_pushButtonSubmit_clicked() {
   QString result =
       QString("%1   %2").arg(QlistToQstring(guess), game_->Guess(guess));
   ui_->listWidgetPastGuesses->insertItem(0, result);
+}
 
-  ui_->digitSpinBox0->setFocus();
+void MainWindow::on_actionNew_triggered() {
+  delete game_;
+  game_ = new Game();
 }
 
 }  // namespace one_a_two_b

@@ -13,7 +13,7 @@ namespace one_a_two_b {
 DigitSpinBox::DigitSpinBox(QWidget *parent) : QSpinBox(parent) {}
 
 void DigitSpinBox::focusInEvent(QFocusEvent *event) {
-  QTimer::singleShot(0, this, SLOT(selectAll()));
+  QTimer::singleShot(0, this, &DigitSpinBox::selectAll);
 }
 
 void DigitSpinBox::keyPressEvent(QKeyEvent *event) {
@@ -39,6 +39,10 @@ void DigitSpinBox::keyPressEvent(QKeyEvent *event) {
     case Qt::Key_9:
       focusNextChild();
   }
+}
+
+void DigitSpinBox::Reset() {
+  setValue(0);
 }
 
 }  // namespace one_a_two_b

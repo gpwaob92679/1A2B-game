@@ -22,6 +22,7 @@ class MainWindow : public QMainWindow {
 
  private slots:
   void on_pushButtonSubmit_clicked();
+  void on_actionNew_triggered();
 
  private:
   Ui::MainWindow *ui_;

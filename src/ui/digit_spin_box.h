@@ -14,6 +14,9 @@ class DigitSpinBox : public QSpinBox {
  protected:
   void focusInEvent(QFocusEvent *event) override;
   void keyPressEvent(QKeyEvent *event) override;
+
+ public slots:
+  void Reset();
 };
 
 } // namespace one_a_two_b

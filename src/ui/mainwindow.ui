@@ -130,16 +130,150 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <widget class="QMenu" name="menuGame">
+    <property name="title">
+     <string>Game</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuGame"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
    <class>one_a_two_b::DigitSpinBox</class>
    <extends>QSpinBox</extends>
    <header>ui/digit_spin_box.h</header>
+   <slots>
+    <slot>Reset()</slot>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNew</sender>
+   <signal>triggered()</signal>
+   <receiver>listWidgetPastGuesses</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>619</x>
+     <y>240</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonSubmit</sender>
+   <signal>clicked()</signal>
+   <receiver>digitSpinBox0</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNew</sender>
+   <signal>triggered()</signal>
+   <receiver>digitSpinBox0</receiver>
+   <slot>Reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>52</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNew</sender>
+   <signal>triggered()</signal>
+   <receiver>digitSpinBox1</receiver>
+   <slot>Reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>122</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNew</sender>
+   <signal>triggered()</signal>
+   <receiver>digitSpinBox2</receiver>
+   <slot>Reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionNew</sender>
+   <signal>triggered()</signal>
+   <receiver>digitSpinBox3</receiver>
+   <slot>Reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>261</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
