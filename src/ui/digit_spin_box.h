@@ -1,5 +1,5 @@
-#ifndef UI_DIGITSPINBOX_H_
-#define UI_DIGITSPINBOX_H_
+#ifndef UI_DIGIT_SPIN_BOX_H_
+#define UI_DIGIT_SPIN_BOX_H_
 
 #include <QSpinBox>
 

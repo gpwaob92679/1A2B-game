@@ -1,6 +1,5 @@
-#include "digit_spin_box.h"
+#include "ui/digit_spin_box.h"
 
-#include <QDebug>
 #include <QFocusEvent>
 #include <QKeyEvent>
 #include <QLineEdit>
